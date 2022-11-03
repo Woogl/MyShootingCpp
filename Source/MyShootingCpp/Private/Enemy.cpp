@@ -33,7 +33,7 @@ void AEnemy::BeginPlay()
 
 	float result = FMath::FRandRange(0.0f, 1.0f);
 
-	if (result < 0.3f)
+	if (result < 0.5f)	// 50% 확률로 플레이어 추적
 	{
 		auto target = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 		direction = target->GetActorLocation() - this->GetActorLocation();
